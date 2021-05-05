@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="shortcut icon" href="../img/logo - Copy.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/animation.css">
+    <style>
+        body{
+            background-color: #e7e7e7;
+        }
+        .clearfix.about-us {
+	background: url(../img/about_background_image.jpg) center/cover local no-repeat;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 302px;
+	margin-top: 93px !important;
+    margin: 0;
+    position: relative;
+}
+.clearfix.about-us::before {
+    background-color: rgba(0,0,0,0.65);
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.about-us-top-body {
+	text-align: center;
+	transform: translateY(100%);
+}
+.about-us-top-body h1 {
+	color: #fff;
+}
+.about-us-top-body h1 font {
+	color: #f00;
+}
+.about-us img{
+    display: none;
+}
+.about-us-top-body p {
+	color: #ababab;
+	font-size: 20px;
+}
+.about-us-top-body p a{
+	color: #ababab;
+	font-size: 20px;
+  text-decoration: none;
+}
+.about-us-top-body p font {
+	color: #f00;
+}
+.about-body-team .col-md-6 {
+    float: left;
+}
+.col-md-6.team-text .text-justify {
+	color: #8C8C8C;
+}
+.about-body-team .col-md-6 .box {
+	float: right !important;
+	padding-left: 20px !important;
+}
+/*=================================*/
+.accordion {
+	background-color: #27B097;
+	color: #FFFFFF;
+	cursor: pointer;
+	padding: 13px 30px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 18px;
+	transition: 0.4s;
+	font-weight: bold;
+}
+
+.active, .accordion:hover {
+  background-color: rgb(17, 161, 135);
+}
+
+.accordion::after {
+	content: '\002b';
+	color: #fff;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px !important;
+	font-size: 23px;
+	padding: 0;
+	margin: -5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	margin-bottom: 12px;
+	box-shadow: 0px 0px 15px -8px #000;
+}
+.panel .col-md-12 .col-md-11.float-left p {
+	padding: 0px 22px;
+	text-align: justify;
+}
+/*=========================================
+===========================================*/
+.cta-bg .container .row .col-md-6.col-md-offset-1.join-us .cta-body {
+	transform: translateY(50%);
+}
+.about-us-footer-top .about-us-footer-top-3 svg {
+	color: #00a78e;
+  margin-bottom: 10px;
+}
+.about-us-footer-top .about-us-footer-top-3 a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #00a783;
+}
+    </style>
+</head>
+<body>
+  <header class="clearfix">
+    <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link btn" type="button" data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                        <span>Zakat For COVID-19</span>
+                    </a>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      DONATIONS
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter" href="#">Donata Now</a><hr>
+                      <a class="dropdown-item" href="./donation-clarification.html">Donation Clarification</a><hr>
+                      <a class="dropdown-item" href="./bank-info.html">Bank Information</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      PROJECTS
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="./IFTAR-Basket-For-Homeless.html">IFTAR Basket For Homeless</a><hr>
+                      <a class="dropdown-item" href="./Zakat-For-Unemployed-Muslims.html">Zakat For Unemployed Muslims</a><hr>
+                      <a class="dropdown-item" href="./Lets-Fight-Against-COVID-19.html">Lets Fight Against COVID 19</a><hr>
+                      <a class="dropdown-item" href="#">One Taka Meal</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./sponsor.html">SPONSOR</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MEDIA
+                  </a>
+                  <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="./gallery.html">Gallery</a><hr>
+                    <a class="dropdown-item" href="./video.html">Video</a><hr>
+                    <a class="dropdown-item" href="./press.html">Press</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ABOUT
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="./about.html">About Us</a><hr>
+                      <a class="dropdown-item" href="./contact.html">Contact Us</a><hr>
+                      <a class="dropdown-item" href="./campaigns.html">Our Campaigns</a><hr>
+                      <a class="dropdown-item" href="./branch.html">Branches</a><hr>
+                      <a class="dropdown-item" href="./faq.html">FAQ</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      SIGN IN
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="./sing-up.html">Sign Up</a><hr>
+                      <a class="dropdown-item" href="./sign-in.html">Sign In</a><hr>
+                      <a class="dropdown-item" href="#">Forgot Password</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">বাংলা</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+</header>
+
+    <main class="clearfix">
+        <section class="clearfix about-us" style="background: url(../img/about_background_image.jpg) center/cover local no-repeat;">
+            <img src="../img/about_background_image.jpg" alt="">
+            <div class="about-us-top-body">
+                <h1>ABOUT <font>US</font></h1>
+                <p><a href="../index.html">HOME</a> / <font>About Us</font></p>
+            </div>
+        </section>
+        <section class="clearfix container p-0 my-5">
+            <div class="about-body-team">
+                <div class="col-md-12">
+                    <div class="col-md-6 team-text">
+                        <h1>We are Team Bidyanondo</h1>
+                        <p class="text-secondary text-left">A crazy group of people to inspire a nation</p>
+                        <br>
+                        <p class="text-justify">
+                            Bidyanondo (Learn for Fun) is an educational voluntary organization 
+                            in Bangladesh. The official registration No. is S-12258/2015). Bidyanondo 
+                            has been running by 40 officers and hundreds of volunteers, whose mission 
+                            is to foster philanthropy domestically and internationally by designing 
+                            innovative and inspiring programs. Our goal is to engage students and 
+                            professionals in Bangladesh and work together to educate, empower and lift 
+                            orphaned of the society. We are giving free education and education materials, 
+                            and library. We arrange educational film programs per months, not only for 
+                            the volunteers also for the street children. Our aim is to help people and 
+                            let them to feel happy for that we organized one taka meal program. In this 
+                            program, we provide diverse food for One Taka. This program covers people under 
+                            the age of 12 and over 60 years old people. We are here to help people who are 
+                            struggling with poverty and do not have enough food to survive.
+                        </p>
+                    </div>
+                    <div class="col col-md-6">
+                        <div class="box">
+                          <div class="video">
+                            <img src="../img/about_video_poster_image.jpg" class="img img-responsive" alt="">
+                            <a class="video-btn" href="#" data-type="iframe">
+                              <i class="fas fa-play"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <section class="clearfix container">
+            <button class="accordion">Vision & Mission</button>
+            <div class="panel">
+                <div class="col-md-12 mt-2">
+                    <div class="col-md-1 float-left">
+                        <img class="img img-fluid img-responsive" src="../img/about_vision_image.png" alt="">
+                    </div>
+                    <div class="col-md-11 float-left">
+                        <p><b> Vision:</b> Our vision is to spread humanity and kindness, and bring social justice, where people live in a peaceful environment.</p>
+                        <p><b> Mission:</b> Our mission is to provide education and nourishment, for underprivileged nations of the society.</p>
+                            
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Where we work</button>
+            <div class="panel">
+                <div class="col-md-12 mt-2">
+                    <div class="col-md-1 float-left">
+                        <img class="img img-fluid img-responsive" src="../img/about_work_image.png" alt="">
+                    </div>
+                    <div class="col-md-11 float-left">
+                        <p>
+                            We work with some of the world's most vulnerable communities around the world, 
+                            mainly in Bangladesh and Latin America. We run some regular projects at these 
+                            areas, such as schools, orphan centers, infirmaries, hostels, food projects, 
+                            medical projects, legal aid, library etc. Besides these, when emergencies strike 
+                            in these countries, we are there before, during and after to save lives and support 
+                            people in the long term. We also work in other countries and regions through our other 
+                            partners, particularly around humanitarian emergencies such as the refugee crisis.
+                        </p>
+                            
+                    </div>
+                </div>
+            </div>
+            <button class="accordion">Our story</button>
+            <div class="panel">
+                <div class="col-md-12 mt-2">
+                    <div class="col-md-1 float-left">
+                        <img class="img img-fluid img-responsive" src="../img/about_story_image.png" alt="">
+                    </div>
+                    <div class="col-md-11 float-left">
+                        <p>
+                            Bidyanondo was founded by Kishor Kumar Das, a former Peru-based corporate professional 
+                            and social activist, who is also emerged from an underprivileged class. The concept is 
+                            his brainchild and it is his vision that has created its distinctive holistic approach 
+                            to helping vulnerable and disadvantaged people achieve self-dignity, self-determination 
+                            and self-sufficiency in Bangladeshi society. He also works with several charities in South 
+                            America in order to bring new solutions to complex problems. He does this with uniqueness, 
+                            effectiveness and originality. Later A team of members from differing backgrounds in the 
+                            society came together to dedicate their time, resources and skills to take forward his idea. 
+                            The idea eventually took shape in the form of the currently running foundation, providing 
+                            education, shelter, nutrition, healthcare & legal aid to the impoverished and enabling them 
+                            with skills, giving them the confidence to stand on the same pedestal as their peers. Bidyanondo 
+                            has started it's journey with just 22 students at Narayangonj in 22 December, 2013. Currently it 
+                            has eight branches nationwide with hundreads of volunteers, two orphanages in Ramu & Rajbari with 
+                            135 orphan child, one Old Age Home, One full Primary school on it's own land with 250 students, 
+                            Two libraries with thousands of books open for all. Besides these, bidyanondo has been conducted 
+                            some unique and innovative programs such as One Taka Meal, One Taka Medical Aid, One Glass of Milk, 
+                            Free academic coaching, Orphanage Center, Free University admission Coaching, Scholarship Program, 
+                            Photography for children, Women Empowerment, Training Center etc.
+                        </p>
+                            
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clearfix cta-bg mb-5" style="background: #000 url(../img/cta-bg.png) center center/auto no-repeat local; padding: 70px 0;">
+            <div class="container">
+              <div class="row">
+                <div class="col col-12 col-md-5 col-sm-5">
+                  <img class="img img-fluid img-responsive" src="../img/signup_donor_image.jpg" alt="">
+                </div>
+                <div class="col col-12 col-md-6 col-md-offset-1 join-us col-sm-7">
+                  <div class="cta-body wow fadeInRightSlow" style="visibility: visible; animation-name: fadeInRightSlow;">
+                  <h2>Join us</h2>
+                  <p>
+                    We need your support to spread our services and bring happiness through a cooperation and team work.
+                  </p>
+                  <a href="./sing-up.html" type="button" class="btn theme-btn cta-btn text-center">SIGN UP</a>
+                </div></div>
+              </div>
+            </div>
+          </section>
+
+        <section class="clearfix container my-5">
+            <div class="col col-md-12 about-us-footer-top">
+              <div class="col-md-4 float-left">
+                <div class="about-us-footer-top-3 text-center">
+                    <i class="fas fa-donate fa-3x"></i>
+                    <h4>Donations</h4>
+                    <p class="text-secondary">Bidyanondo is always with you at any crisis in Bangladesh to help and support you.</p>
+                    <a href="#">Donata now</a>
+                </div>
+              </div>
+              <div class="col-md-4 float-left">
+                <div class="about-us-footer-top-3 text-center">
+                    <i class="fas fa-users fa-3x"></i>
+                    <h4>Be a Volunteer of Us</h4>
+                    <p class="text-secondary">Bidyanondo will be proud of you to work as a volunteer and help people.</p>
+                    <a href="#">Registration</a>
+                </div>
+              </div>
+              <div class="col-md-4 float-left">
+                <div class="about-us-footer-top-3 text-center">
+                    <i class="fas fa-user-secret fa-3x"></i>
+                    <h4>Sponsorship</h4>
+                    <p class="text-secondary">Support us by your donations to create a better future.</p>
+                    <a href="#">Sponsor</a>
+                </div>
+              </div>
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="container clearfix section-padding">
+          <div class="col float-left col-md-5">
+           <img src="../img/logo - Copy.png" alt="">
+           <br><br>
+           <p>Bidyanondo (Learn for Fun) is an educational voluntary organization in Bangladesh. The official registration No. is S-12258/2015). Bidyanondo has been running by 40 officers and hundreds of volunteers, whose mission is t...</p>
+            <br>
+            <a href="#" style="color: #00a78e !important; font-weight: bold;" >READ MORE <i class="fas fa-long-arrow-alt-right"></i></i></a>
+            <br>
+            <br>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="col float-left col-md-2">
+            <h5 class="title">VISIT</h5>
+            <p>Projects</p>
+            <p>Sponsor</p>
+            <p>Gallery</p>
+            <p>Sign in</p>
+          </div>
+          <div class="col float-left col-md-2">
+            <h5 class="title">HELP</h5>
+            <p>FAQ</p>
+            <p>Contact us</p>
+            <p>About Us</p>
+            <p>Volunteers</p>
+          </div>
+          <div class="col float-left col-md-3">
+            <h5 class="title">CONTACT</h5>
+            <p><i class="fas fa-map-marker-alt"></i>&nbsp; : House: 13 (1st floor), Road: 2/B, Pallabi R/A, Mirpur,Dhaka- 1216</p>
+            <p><i class="fas fa-phone-alt"></i>&nbsp; : +880 1878116234</p>
+          </div>
+        </div>
+        <div class="developed"> <p>Developed <font>&hearts;</font> by <font>Md Monabbor Hossen</font> </p> </div>
+      </footer>
+
+
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+
+
+
+<section>
+  
+  <div class="fixed-bottom">
+    <div class="scroll-top float-left">
+      <button onclick="topFunction()" id="hiBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+    </div>
+    <button id="myBtn">
+    <i class="fab fa-facebook-messenger fa-3x"></i>
+    </button>
+  </div>
+  <div class="modal-massenger">
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content" style="position: absolute;">
+    <span class="close" style="position: relative;"><div class="close-close-btn"> &times;</div></span>
+    <div class="col-md-12">
+      <div class="col-md-3 float-left">
+        <img class="img img-fluid img-responsive" src="../img/logo - Copy.png">
+      </div>
+      <div class="col-md-9 float-left">
+        <div class="modal-massenger-top text-secondary"><p>বিদ্যানন্দ - Bidyanondo</p></div>
+        <div class="modal-massenger-text alert alert-dark" role="alert"><p>Hi! We're here to answer any questions you may have.</p></div>
+        <div class="modal-massenger-button">
+          <a href="#"><button><i class="fab fa-facebook-messenger"></i> Log into Messenger</button></a>
+        </div>
+        <div class="modal-massenger-bottom text-secondary"><p>Chat with বিদ্যানন্দ - Bidyanondo in Messenger</p></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+<script>
+  //Get the button
+  var mybutton = document.getElementById("hiBtn");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+    <section>
+      <!-- The Modal -->
+                          <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="exampleModalCenterTitle">Zakat For COVID-19 Relief Fund</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><font>৳</font> BDT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><font>$</font> USD</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <div class="amount clearfix mb-4">
+              <div class="bdt-5">
+                <div class="bdt float-left">
+                <input type="radio" name="bdt" id="bdt-5">
+                <label for="bdt-5">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>৳</font> 5,000(Capital for Street Hawker)</span>
+                </div>
+              <div class="bdt-10">
+                <div class="bdt float-left">
+                <input type="radio" name="bdt" id="bdt-10">
+                <label for="bdt-10">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>৳</font> 10,000 (Seeds-Fertilizer for Farmers) </span>
+                </div>
+              <div class="bdt-18">
+                <div class="bdt float-left">
+                <input type="radio" name="bdt" id="bdt-18">
+                <label for="bdt-18">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>৳</font> 18,000 (Rickshaw/Van for slum people) </span>
+                </div>
+              <div class="bdt-36">
+                <div class="bdt float-left">
+                <input type="radio" name="bdt" id="bdt-36">
+                <label for="bdt-36">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>৳</font> 36,000 (Scholarship for Muslim Student) </span>
+                </div>
+              <div class="bdt-60">
+                <div class="bdt float-left">
+                <input type="radio" name="bdt" id="bdt-60">
+                <label for="bdt-60">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>৳</font> 60,000 (Buying life stock for village woman) </span>
+                </div>
+              <div class="bdt-95">
+                <div class="bdt float-left">
+                <input type="radio" name="bdt" id="bdt-95">
+                <label for="bdt-95">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>৳</font> 95,000 (Sewing machine for 10 women) </span>
+                </div>
+                <div class="custom">
+                  <div class="bdt float-left">
+                  <input type="radio" name="bdt" id="custom">
+                  <label for="custom">
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                  </label>
+                  </div>
+                  <input class="ml-2" type="number" placeholder="Custom Amount" name="" id="">
+                  </div>
+                </div>
+                  <form action="">
+                    <textarea name="Comment" id="" cols="30" placeholder="Comments here..." rows="10"></textarea>
+                    <button type="submit"><i class="fas fa-money-bill-alt"></i> PAY WITH CARD/MOBILE BANKING/BANK TRANSFER</button>
+                    <div class="pay-img">
+                      <img src="../img/pay/ab_direct-sq.png" alt="">
+                      <img src="../img/pay/bankasia-sq.png" alt="">
+                      <img src="../img/pay/bkash-sq.png" alt="">
+                      <img src="../img/pay/citytouch.png" alt="">
+                      <img src="../img/pay/dbbl-nexus-sq.png" alt="">
+                      <img src="../img/pay/dbbl_mobile-sq.png" alt="">
+                      <img src="../img/pay/dmoney.png" alt="">
+                      <img src="../img/pay/ipay.png" alt="">
+                      <img src="../img/pay/islamibank-sq.png" alt="">
+                      <img src="../img/pay/masterc-sq.png" alt="">
+                      <img src="../img/pay/mcash-sq.png" alt="">
+                      <img src="../img/pay/mobilemoney.png" alt="">
+                      <img src="../img/pay/mtb-sq.png" alt="">
+                      <img src="../img/pay/my-cash-sq.png" alt="">
+                      <img src="../img/pay/nogod-logo.png" alt="">
+                      <img src="../img/pay/okwallet-sq.png" alt="">
+                      <img src="../img/pay/paypal.png" alt="">
+                      <img src="../img/pay/sure-cash.png" alt="">
+                      <img src="../img/pay/tapnpay-sq.png" alt="">
+                      <img src="../img/pay/upay.png" alt="">
+                      <img src="../img/pay/visa-sq.png" alt="">
+                      <img src="../img/pay/amx.png" alt="">
+                    </div>
+                  </form>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+              <div class="amount clearfix mb-4">
+              <div class="usd-5">
+                <div class="usd float-left">
+                <input type="radio" name="usd" id="usd-5">
+                <label for="usd-5">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>$</font> 61 (Capital for Street Hawker) </span>
+                </div>
+              <div class="usd-10">
+                <div class="usd float-left">
+                <input type="radio" name="usd" id="usd-10">
+                <label for="usd-10">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>$</font> 122 (Seeds-Fertilizer for Farmers)  </span>
+                </div>
+              <div class="usd-18">
+                <div class="usd float-left">
+                <input type="radio" name="usd" id="usd-18">
+                <label for="usd-18">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>$</font> 220 (Rickshaw/Van for slum people) </span>
+                </div>
+              <div class="usd-36">
+                <div class="usd float-left">
+                <input type="radio" name="usd" id="usd-36">
+                <label for="usd-36">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>$</font> 440 (Scholarship for Muslim Student) </span>
+                </div>
+              <div class="usd-60">
+                <div class="usd float-left">
+                <input type="radio" name="usd" id="usd-60">
+                <label for="usd-60">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>$</font> 732 (Buying life stock for village woman) </span>
+                </div>
+              <div class="usd-95">
+                <div class="usd float-left">
+                <input type="radio" name="usd" id="usd-95">
+                <label for="usd-95">
+                  <i class="fas fa-check" aria-hidden="true"></i>
+                </label>
+                </div>
+                <span class="text"><font>$</font> 1,159 (Sewing machine for 10 women) </span>
+                </div>
+                <div class="custom">
+                  <div class="usd float-left">
+                  <input type="radio" name="usd" id="custom">
+                  <label for="custom">
+                    <i class="fas fa-check" aria-hidden="true"></i>
+                  </label>
+                  </div>
+                  <input class="ml-2" type="number" value="0" placeholder="Custom Amount" name="" id="">
+                  </div>
+                  </div>
+                  <form action="">
+                    <textarea name="Comment" id="" cols="30" placeholder="Comments here..." rows="10"></textarea>
+                    <button type="submit"><i class="fas fa-money-bill-alt"></i> PAY WITH CARD/MOBILE BANKING/BANK TRANSFER</button>
+                    <div class="pay-img">
+                      <img src="../img/pay/ab_direct-sq.png" alt="">
+                      <img src="../img/pay/bankasia-sq.png" alt="">
+                      <img src="../img/pay/bkash-sq.png" alt="">
+                      <img src="../img/pay/citytouch.png" alt="">
+                      <img src="../img/pay/dbbl-nexus-sq.png" alt="">
+                      <img src="../img/pay/dbbl_mobile-sq.png" alt="">
+                      <img src="../img/pay/dmoney.png" alt="">
+                      <img src="../img/pay/ipay.png" alt="">
+                      <img src="../img/pay/islamibank-sq.png" alt="">
+                      <img src="../img/pay/masterc-sq.png" alt="">
+                      <img src="../img/pay/mcash-sq.png" alt="">
+                      <img src="../img/pay/mobilemoney.png" alt="">
+                      <img src="../img/pay/mtb-sq.png" alt="">
+                      <img src="../img/pay/my-cash-sq.png" alt="">
+                      <img src="../img/pay/nogod-logo.png" alt="">
+                      <img src="../img/pay/okwallet-sq.png" alt="">
+                      <img src="../img/pay/paypal.png" alt="">
+                      <img src="../img/pay/sure-cash.png" alt="">
+                      <img src="../img/pay/tapnpay-sq.png" alt="">
+                      <img src="../img/pay/upay.png" alt="">
+                      <img src="../img/pay/visa-sq.png" alt="">
+                      <img src="../img/pay/amx.png" alt="">
+                    </div>
+                  </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/all.min.js"></script>
+<script src="../js/fontawesome.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

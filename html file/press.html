@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Press</title>
+    <link rel="shortcut icon" href="../img/logo - Copy.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+    <link rel="stylesheet" href="../css/style1.css">
+
+    <style>
+/*========================================*/
+.slider {
+        width: 100%;
+        margin: 100px auto;
+    }
+
+    .slick-slide {
+      margin: 0px 0px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      color: black;
+    }
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+    .slick-slide .slider-body-text{
+      opacity: 0;
+    }
+    .slick-active {
+      opacity: .5;
+    }
+    .slick-active .slider-body-text{
+      opacity: 0;
+    }
+    .slick-current {
+      opacity: 1;
+    }
+    .slick-current .slider-body-text{
+      opacity: 1;
+      background-color: #00a78e;
+    }
+    .slider-body-text {
+      color: #fff;
+      padding: 13px 15px;
+      font-size: 20px;
+      border-radius: 0px 0px 5px 5px;
+      height: 150px;
+    }
+    .slider-body-text h6,.slider-body-text .fas{
+      color: #fff;
+    }
+    .slick-prev{
+      left: 0;
+      z-index: 1;
+    }
+    .slick-next{
+      right: 0;
+    }
+    .slick-prev:hover, .slick-next:hover{
+      background: #00a78e;
+    }
+    .slick-prev, .slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 30px;
+	height: 50px;
+	padding: 0;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: #00a78e;
+}
+
+/*========================================*/
+.clearfix.gallery-top {
+	background: url(../img/gallery_background_image.jpg) center/cover local no-repeat;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 302px;
+	margin-top: 93px !important;
+    margin: 0;
+    position: relative;
+}
+.clearfix.gallery-top::before {
+  background-color: rgba(0,0,0,0.65);
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.gallery-top-body {
+	text-align: center;
+	transform: translateY(50%);
+}
+.gallery-top-body h1 {
+	color: #fff;
+}
+.gallery-top-body h1 font {
+	color: #f00;
+}
+.gallery-top img{
+    display: none;
+}
+.gallery-top-body p {
+	color: #ababab;
+	font-size: 20px;
+}
+.gallery-top-body p a{
+  text-decoration: none;
+  color: #ababab;
+	font-size: 20px;
+}
+.gallery-top-body p font {
+	color: #f00;
+}
+.gallery-top-body a button{
+    border: 2px solid #00a78e;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+}
+.gallery-top-body a button:hover{
+    color: #fff;
+    background-color: #00a78e;
+}
+/*======================================*/
+
+/*=======================================*/
+.navigation{
+            padding: 25px 0px;
+            text-align: center;
+        }
+        .navigation a{
+            margin-right: 5px;
+            text-decoration: none;
+            text-align: center;
+            padding: 2px 5px;
+            color: #666;
+            font-size: 15px;
+        }
+        .navigation a.active{
+            color: #f00;
+        }
+        .ImageContainer div{
+            display: inline-block;
+        }
+        .clearfix.container .navigation span{
+            color: #00a78e;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+  <header class="clearfix">
+    <div class="container-fluid">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../img/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link btn" type="button" data-toggle="modal" data-target="#exampleModalCenter" href="#">
+                        <span>Zakat For COVID-19</span>
+                    </a>
+                  </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      DONATIONS
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" data-toggle="modal" data-target="#exampleModalCenter" href="#">Donata Now</a><hr>
+                      <a class="dropdown-item" href="./donation-clarification.html">Donation Clarification</a><hr>
+                      <a class="dropdown-item" href="./bank-info.html">Bank Information</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      PROJECTS
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="./IFTAR-Basket-For-Homeless.html">IFTAR Basket For Homeless</a><hr>
+                      <a class="dropdown-item" href="./Zakat-For-Unemployed-Muslims.html">Zakat For Unemployed Muslims</a><hr>
+                      <a class="dropdown-item" href="./Lets-Fight-Against-COVID-19.html">Lets Fight Against COVID 19</a><hr>
+                      <a class="dropdown-item" href="#">One Taka Meal</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./sponsor.html">SPONSOR</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    MEDIA
+                  </a>
+                  <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="./gallery.html">Gallery</a><hr>
+                    <a class="dropdown-item" href="./video.html">Video</a><hr>
+                    <a class="dropdown-item" href="./press.html">Press</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      ABOUT
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="./about.html">About Us</a><hr>
+                      <a class="dropdown-item" href="./contact.html">Contact Us</a><hr>
+                      <a class="dropdown-item" href="./campaigns.html">Our Campaigns</a><hr>
+                      <a class="dropdown-item" href="./branch.html">Branches</a><hr>
+                      <a class="dropdown-item" href="./faq.html">FAQ</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      SIGN IN
+                    </a>
+                    <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="./sing-up.html">Sign Up</a><hr>
+                      <a class="dropdown-item" href="./sign-in.html">Sign In</a><hr>
+                      <a class="dropdown-item" href="#">Forgot Password</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">বাংলা</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+    </div>
+</header>
+
+    <main class="clearfix">
+        <section class="clearfix gallery-top" style="background: url(../img/about_background_image.jpg) center/cover local no-repeat;">
+            <img src="../img/about_background_image.jpg" alt="">
+            <div class="gallery-top-body">
+                <h1><font>PRESS</font></h1>
+                <p><a href="../index.html">HOME </a> / <font>Press</font></p>
+                <a href="#"><button type="button" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn-projects-danger">DONATE</button></a>
+            </div>
+        </section>
+
+        <section class="clearfix section-padding">
+            <div class="navigation">
+                <a href="#" data-filter="all" class="button active" >All</a> <span>/</span>
+                <a href="#" data-filter="one" class="button">Ramadan activities</a> <span>/</span>
+                <a href="#" data-filter="two" class="button">1 Taka Ahar</a> <span>/</span>
+                <a href="#" data-filter="three" class="button">Education Projects</a> <span>/</span>
+                <a href="#" data-filter="four" class="button">Rohinga Campaign</a>
+            </div>
+            <div class="press  ">
+                <div class="slick-slider slider">
+                    <div><img class="" src="../img/bidyanondo-press-34-1557843088.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> May 13th,2019</h6><p>Country’s first ever digital iftar vending machine: This Ramadan...</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-8-1556268049.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> December 12th,2018</h6><p>"1 taka" meals providing nutritional lifeline to Bangladesh's str...</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-17-1556262084.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> January 9th,2019</h6><p>1 TK meal, 1 TK medical treatment</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-2-1556269534.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> January 10th,2019</h6><p>বিদ্যানন্দ: জীবনের আনন্দপাঠ</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-3-1556269240.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> December 10th,2019</h6><p>শুধু পরীক্ষা পাস করতে নয়, নিজের খুশিতেই ওরা পড়তে আসে বিদ্যানন্দে</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-4-1556269060.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> January 1th,2019</h6><p>A Bangladeshi Man Who Knows Hunger All Too Well Provides Affordab...</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-5-1556268560.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> January 8th,2019</h6><p>Bidyanondo: A haven for the deprived</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-12-1556265046.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> January 2nd,2019</h6><p>সুবিধাবঞ্চিতদের সেহরি খাওয়ান যারা</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-13-1556260767.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>This estimate marks a significant jump from the latest available...</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-14-1556264911.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>Bidyanondo brings tasty nutrition to Rohingya children</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-15-1556264626.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>পিছিয়ে পড়াদের আনন্দ ‘বিদ্যানন্দ’</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-35-1558187664.JPG" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>তারুণ্যের অনন্য প্রয়াস ‘বিদ্যানন্দ ফাউন্ডেশন’</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-36-1558195370.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>সুবিধাবঞ্চিত শিশুদের অন্নদাতা এক কিশোর কুমারের গল্প</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-6-1556268320.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>সুবিধাবঞ্চিত শিশুদের নিয়ে যাদের পথচলা</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-5-1556268560.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>অল্প টাকায় আপনিও দরিদ্র শিশুদের খাবার দিতে পারেন</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-9-1556266152.jpg" alt=""> <div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> February 6th,2019</h6><p>ইফতারি পেয়ে হাসি ফোটে মানুষের মুখে</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-10-1556265680.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> May 18th,2019</h6><p>বইমেলায় বিক্রেতা বিহীন স্টল | এক টাকায় খাবারের আরও একটি ব্যতিক্...</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-11-1556265133.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> December 8th,2019</h6><p>আর টি ভি এস এম সি মনিমিক্স প্রেরণা পদক ২০১৮ বিদ্যানন্দ ফাউন্ডেশন</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    <div><img class="" src="../img/bidyanondo-press-15-1556264626.jpg" alt=""><div class="slider-body-text"><h6><i class="fas fa-calendar-alt"></i> </h6><p>Country’s first ever digital iftar vending machine: This Ramadan...</p><a href="#" style="color: #000; text-decoration: none;">Read More &RightArrow;</a></div> </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer class="footer">
+        <div class="container clearfix section-padding">
+          <div class="col float-left col-md-5">
+           <img src="../img/logo - Copy.png" alt="">
+           <br><br>
+           <p>Bidyanondo (Learn for Fun) is an educational voluntary organization in Bangladesh. The official registration No. is S-12258/2015). Bidyanondo has been running by 40 officers and hundreds of volunteers, whose mission is t...</p>
+            <br>
+            <a href="#" style="color: #00a78e !important; font-weight: bold;" >READ MORE <i class="fas fa-long-arrow-alt-right"></i></i></a>
+            <br>
+            <br>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="col float-left col-md-2">
+            <h5 class="title">VISIT</h5>
+            <p>Projects</p>
+            <p>Sponsor</p>
+            <p>Gallery</p>
+            <p>Sign in</p>
+          </div>
+          <div class="col float-left col-md-2">
+            <h5 class="title">HELP</h5>
+            <p>FAQ</p>
+            <p>Contact us</p>
+            <p>About Us</p>
+            <p>Volunteers</p>
+          </div>
+          <div class="col float-left col-md-3">
+            <h5 class="title">CONTACT</h5>
+            <p><i class="fas fa-map-marker-alt"></i>&nbsp; : House: 13 (1st floor), Road: 2/B, Pallabi R/A, Mirpur,Dhaka- 1216</p>
+            <p><i class="fas fa-phone-alt"></i>&nbsp; : +880 1878116234</p>
+          </div>
+        </div>
+        <div class="developed"> <p>Developed <font>&hearts;</font> by <font>Md Monabbor Hossen</font> </p> </div>
+      </footer>
+  
+
+
+
+
+
+
+      <section>
+  
+        <div class="fixed-bottom">
+          <div class="scroll-top float-left">
+            <button onclick="topFunction()" id="hiBtn" title="Go to top"><i class="fas fa-angle-up"></i></button>
+          </div>
+          <button id="myBtn">
+          <i class="fab fa-facebook-messenger fa-3x"></i>
+          </button>
+        </div>
+        <div class="modal-massenger">
+        <!-- The Modal -->
+      <div id="myModal" class="modal">
+      
+        <!-- Modal content -->
+        <div class="modal-content" style="position: absolute;">
+          <span class="close" style="position: relative;"><div class="close-close-btn"> &times;</div></span>
+          <div class="col-md-12">
+            <div class="col-md-3 float-left">
+              <img class="img img-fluid img-responsive" src="../img/logo - Copy.png">
+            </div>
+            <div class="col-md-9 float-left">
+              <div class="modal-massenger-top text-secondary"><p>বিদ্যানন্দ - Bidyanondo</p></div>
+              <div class="modal-massenger-text alert alert-dark" role="alert"><p>Hi! We're here to answer any questions you may have.</p></div>
+              <div class="modal-massenger-button">
+                <a href="#"><button><i class="fab fa-facebook-messenger"></i> Log into Messenger</button></a>
+              </div>
+              <div class="modal-massenger-bottom text-secondary"><p>Chat with বিদ্যানন্দ - Bidyanondo in Messenger</p></div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+      </div>
+      </section>
+      <script>
+        //Get the button
+        var mybutton = document.getElementById("hiBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+        <section>
+          <!-- The Modal -->
+                              <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalCenterTitle">Zakat For COVID-19 Relief Fund</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true"><font>৳</font> BDT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false"><font>$</font> USD</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <div class="amount clearfix mb-4">
+                  <div class="bdt-5">
+                    <div class="bdt float-left">
+                    <input type="radio" name="bdt" id="bdt-5">
+                    <label for="bdt-5">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>৳</font> 5,000(Capital for Street Hawker)</span>
+                    </div>
+                  <div class="bdt-10">
+                    <div class="bdt float-left">
+                    <input type="radio" name="bdt" id="bdt-10">
+                    <label for="bdt-10">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>৳</font> 10,000 (Seeds-Fertilizer for Farmers) </span>
+                    </div>
+                  <div class="bdt-18">
+                    <div class="bdt float-left">
+                    <input type="radio" name="bdt" id="bdt-18">
+                    <label for="bdt-18">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>৳</font> 18,000 (Rickshaw/Van for slum people) </span>
+                    </div>
+                  <div class="bdt-36">
+                    <div class="bdt float-left">
+                    <input type="radio" name="bdt" id="bdt-36">
+                    <label for="bdt-36">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>৳</font> 36,000 (Scholarship for Muslim Student) </span>
+                    </div>
+                  <div class="bdt-60">
+                    <div class="bdt float-left">
+                    <input type="radio" name="bdt" id="bdt-60">
+                    <label for="bdt-60">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>৳</font> 60,000 (Buying life stock for village woman) </span>
+                    </div>
+                  <div class="bdt-95">
+                    <div class="bdt float-left">
+                    <input type="radio" name="bdt" id="bdt-95">
+                    <label for="bdt-95">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>৳</font> 95,000 (Sewing machine for 10 women) </span>
+                    </div>
+                    <div class="custom">
+                      <div class="bdt float-left">
+                      <input type="radio" name="bdt" id="custom">
+                      <label for="custom">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                      </label>
+                      </div>
+                      <input class="ml-2" type="number" placeholder="Custom Amount" name="" id="">
+                      </div>
+                    </div>
+                      <form action="">
+                        <textarea name="Comment" id="" cols="30" placeholder="Comments here..." rows="10"></textarea>
+                        <button type="submit"><i class="fas fa-money-bill-alt"></i> PAY WITH CARD/MOBILE BANKING/BANK TRANSFER</button>
+                        <div class="pay-img">
+                          <img src="../img/pay/ab_direct-sq.png" alt="">
+                          <img src="../img/pay/bankasia-sq.png" alt="">
+                          <img src="../img/pay/bkash-sq.png" alt="">
+                          <img src="../img/pay/citytouch.png" alt="">
+                          <img src="../img/pay/dbbl-nexus-sq.png" alt="">
+                          <img src="../img/pay/dbbl_mobile-sq.png" alt="">
+                          <img src="../img/pay/dmoney.png" alt="">
+                          <img src="../img/pay/ipay.png" alt="">
+                          <img src="../img/pay/islamibank-sq.png" alt="">
+                          <img src="../img/pay/masterc-sq.png" alt="">
+                          <img src="../img/pay/mcash-sq.png" alt="">
+                          <img src="../img/pay/mobilemoney.png" alt="">
+                          <img src="../img/pay/mtb-sq.png" alt="">
+                          <img src="../img/pay/my-cash-sq.png" alt="">
+                          <img src="../img/pay/nogod-logo.png" alt="">
+                          <img src="../img/pay/okwallet-sq.png" alt="">
+                          <img src="../img/pay/paypal.png" alt="">
+                          <img src="../img/pay/sure-cash.png" alt="">
+                          <img src="../img/pay/tapnpay-sq.png" alt="">
+                          <img src="../img/pay/upay.png" alt="">
+                          <img src="../img/pay/visa-sq.png" alt="">
+                          <img src="../img/pay/amx.png" alt="">
+                        </div>
+                      </form>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="amount clearfix mb-4">
+                  <div class="usd-5">
+                    <div class="usd float-left">
+                    <input type="radio" name="usd" id="usd-5">
+                    <label for="usd-5">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>$</font> 61 (Capital for Street Hawker) </span>
+                    </div>
+                  <div class="usd-10">
+                    <div class="usd float-left">
+                    <input type="radio" name="usd" id="usd-10">
+                    <label for="usd-10">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>$</font> 122 (Seeds-Fertilizer for Farmers)  </span>
+                    </div>
+                  <div class="usd-18">
+                    <div class="usd float-left">
+                    <input type="radio" name="usd" id="usd-18">
+                    <label for="usd-18">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>$</font> 220 (Rickshaw/Van for slum people) </span>
+                    </div>
+                  <div class="usd-36">
+                    <div class="usd float-left">
+                    <input type="radio" name="usd" id="usd-36">
+                    <label for="usd-36">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>$</font> 440 (Scholarship for Muslim Student) </span>
+                    </div>
+                  <div class="usd-60">
+                    <div class="usd float-left">
+                    <input type="radio" name="usd" id="usd-60">
+                    <label for="usd-60">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>$</font> 732 (Buying life stock for village woman) </span>
+                    </div>
+                  <div class="usd-95">
+                    <div class="usd float-left">
+                    <input type="radio" name="usd" id="usd-95">
+                    <label for="usd-95">
+                      <i class="fas fa-check" aria-hidden="true"></i>
+                    </label>
+                    </div>
+                    <span class="text"><font>$</font> 1,159 (Sewing machine for 10 women) </span>
+                    </div>
+                    <div class="custom">
+                      <div class="usd float-left">
+                      <input type="radio" name="usd" id="custom">
+                      <label for="custom">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                      </label>
+                      </div>
+                      <input class="ml-2" type="number" value="0" placeholder="Custom Amount" name="" id="">
+                      </div>
+                      </div>
+                      <form action="">
+                        <textarea name="Comment" id="" cols="30" placeholder="Comments here..." rows="10"></textarea>
+                        <button type="submit"><i class="fas fa-money-bill-alt"></i> PAY WITH CARD/MOBILE BANKING/BANK TRANSFER</button>
+                        <div class="pay-img">
+                          <img src="../img/pay/ab_direct-sq.png" alt="">
+                          <img src="../img/pay/bankasia-sq.png" alt="">
+                          <img src="../img/pay/bkash-sq.png" alt="">
+                          <img src="../img/pay/citytouch.png" alt="">
+                          <img src="../img/pay/dbbl-nexus-sq.png" alt="">
+                          <img src="../img/pay/dbbl_mobile-sq.png" alt="">
+                          <img src="../img/pay/dmoney.png" alt="">
+                          <img src="../img/pay/ipay.png" alt="">
+                          <img src="../img/pay/islamibank-sq.png" alt="">
+                          <img src="../img/pay/masterc-sq.png" alt="">
+                          <img src="../img/pay/mcash-sq.png" alt="">
+                          <img src="../img/pay/mobilemoney.png" alt="">
+                          <img src="../img/pay/mtb-sq.png" alt="">
+                          <img src="../img/pay/my-cash-sq.png" alt="">
+                          <img src="../img/pay/nogod-logo.png" alt="">
+                          <img src="../img/pay/okwallet-sq.png" alt="">
+                          <img src="../img/pay/paypal.png" alt="">
+                          <img src="../img/pay/sure-cash.png" alt="">
+                          <img src="../img/pay/tapnpay-sq.png" alt="">
+                          <img src="../img/pay/upay.png" alt="">
+                          <img src="../img/pay/visa-sq.png" alt="">
+                          <img src="../img/pay/amx.png" alt="">
+                        </div>
+                      </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".button").click(function(){
+                var name = $(this).attr("data-filter");
+                if(name == "all"){
+                    $(".filter").show("2000");
+                }
+                else{
+                    $(".filter").not("."+name).hide("2000");
+                    $(".filter").filter("."+name).show("2000");
+                }
+            });
+            $(".navigation a").click(function(){
+                $(this).addClass("active").siblings().removeClass("active")
+            });
+        });
+    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../js/slick.min.js"></script>
+    <script src="../js/all.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/fontawesome.min.js"></script>
+    <script>
+        $(document).ready(function(){
+$('.slick-slider').slick({
+        dots: true,
+        infinite: true,
+        centerPadding:'0px',
+        centerMode: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay:true,
+        autoplaySpeed:2000
+});
+      });
+      </script>
+          
+      
+</body>
+</html>
